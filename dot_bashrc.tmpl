@@ -7,3 +7,12 @@ fi
 if  [ -x "$HOME/.local/bin/mise" ]; then
     eval "$($HOME/.local/bin/mise activate bash)"
 fi
+
+{{ if lookPath "starship" -}}
+eval "$(starship init bash)"
+{{ end }}
+
+{{ if lookPath "fzf" -}}
+eval "$(fzf --bash)"
+{{ end }}
+
