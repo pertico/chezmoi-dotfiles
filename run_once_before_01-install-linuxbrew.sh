@@ -12,5 +12,5 @@ if [ ! -d "$HOME/.linuxbrew" ]; then
     eval "$($HOME/.linuxbrew/bin/brew shellenv)"
 fi
 
-brew install chezmoi zellij starship fzf
+brew install chezmoi
 echo -e "${GREEN}[✔] linuxbrew bootstrap completado con éxito.${NC}"

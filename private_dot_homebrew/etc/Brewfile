@@ -1,0 +1,5 @@
+brew "chezmoi"
+brew "zellij"
+brew "starship"
+brew "fzf"
+

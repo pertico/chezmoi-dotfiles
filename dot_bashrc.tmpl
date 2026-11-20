@@ -1,18 +1,18 @@
 {{ include "/etc/skel/.bashrc" }}
 
-if [ -d "$HOME/.linuxbrew" ]; then
-    eval "$($HOME/.linuxbrew/bin/brew shellenv)"
-fi
+{{ if lookPath "brew" -}} 
+eval "$($HOME/.homebrew/bin/brew shellenv)"
+{{ end -}}
 
-if  [ -x "$HOME/.local/bin/mise" ]; then
-    eval "$($HOME/.local/bin/mise activate bash)"
-fi
+{{ if lookPath "mise" -}}
+eval "$($HOME/.local/bin/mise activate bash)"
+{{ end -}}
 
 {{ if lookPath "starship" -}}
 eval "$(starship init bash)"
-{{ end }}
+{{ end -}}
 
 {{ if lookPath "fzf" -}}
 eval "$(fzf --bash)"
-{{ end }}
+{{ end -}}
 
