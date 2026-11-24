@@ -1,5 +1,6 @@
 README.md
-run_*
+**/*.sh
+**/*.ps1
 {{ if ne .chezmoi.os "linux" }}
 **/*.sh
 {{ end }}
