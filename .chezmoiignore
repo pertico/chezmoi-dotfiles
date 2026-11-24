@@ -3,6 +3,8 @@ README.md
 **/*.ps1
 {{ if ne .chezmoi.os "linux" }}
 **/*.sh
+.bashrc
+.profile
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
