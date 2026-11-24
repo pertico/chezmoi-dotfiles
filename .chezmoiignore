@@ -1,6 +1,11 @@
 README.md
 **/*.sh
 **/*.ps1
+
+{{ if not (lookPath "brew") }}
+.homebrew/**
+{{ end }}
+
 {{ if ne .chezmoi.os "linux" }}
 **/*.sh
 .bashrc
